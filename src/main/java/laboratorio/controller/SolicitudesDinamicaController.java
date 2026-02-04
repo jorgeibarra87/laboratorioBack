@@ -156,7 +156,6 @@ public class SolicitudesDinamicaController {
         paciente.put("diaCodigo", primero.get("diaCodigo"));
         paciente.put("diaNombre", primero.get("diaNombre"));
         paciente.put("areaSolicitante", primero.get("areaSolicitante"));
-
         // Tipos de aislamiento
         Object tipoAislamiento = primero.get("tipoAislamiento");
         paciente.put("tiposAislamiento",
