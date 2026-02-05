@@ -20,6 +20,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/examenes-tomados")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
 public class ExamenesTomadosController {
 
     private final ExamenesTomadosService examenesTomadosService;
@@ -27,7 +28,7 @@ public class ExamenesTomadosController {
     @Operation(summary = "Obtener examenes tomados por una lista de ingresos",
             description = "Permite obtener los examenes tomados asociados a una lista de ingresos proporcionada en el cuerpo de la solicitud.")
     @PostMapping("/obtener-por-ingresos")
-    public ResponseEntity<List<ExamenTomadoResponse>> obtenerPorIngresos(@RequestBody List<Integer> ingresos) {
+    public ResponseEntity<List<ExamenTomadoResponse>> obtenerPorIngresos(@RequestBody List<String> ingresos) {
         log.info("📥 Recibiendo consulta por {} ingresos", ingresos.size());
         List<ExamenTomadoResponse> response = examenesTomadosService.obtenerExamenesTomadosPorIngresos(ingresos);
         log.info("✅ Se encontraron {} exámenes tomados", response.size());

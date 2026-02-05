@@ -27,6 +27,7 @@ public class SolicitudesDinamicaController {
             "urgentes", "0",
             "rutinarios", "1",
             "prioritarios", "3",
+            "muy urgentes", "4",
             "muy_urgentes", "4"
     );
 

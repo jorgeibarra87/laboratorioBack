@@ -53,7 +53,7 @@ public class ExamenesTomadosServiceImpl implements ExamenesTomadosService {
     }
 
     @Override
-    public List<ExamenTomadoResponse> obtenerExamenesTomadosPorIngresos(List<Integer> ingresos) {
+    public List<ExamenTomadoResponse> obtenerExamenesTomadosPorIngresos(List<String> ingresos) {
         List<ExamenesTomados> examenes = examenesTomadosRepository.findByIngresoIn(ingresos);
         return examenes.stream()
                 .map(examen -> modelMapper.map(examen, ExamenTomadoResponse.class))

@@ -9,7 +9,7 @@ import java.util.List;
 
 public interface ExamenesTomadosRepository extends JpaRepository<ExamenesTomados, Long> {
 
-    List<ExamenesTomados> findByIngresoIn(List<Integer> ingresos);
+    List<ExamenesTomados> findByIngresoIn(List<String> ingresos);
     Page<ExamenesTomados> findAllByOrderByFechaTomadoDesc(Pageable pageable);
 
 }

@@ -11,7 +11,7 @@ import java.util.List;
 public interface ExamenesTomadosService {
 
     List<ExamenTomadoResponse> agregarExamenesTomados(@Valid List<ExamenTomadoRequestDTO> request);
-    List<ExamenTomadoResponse> obtenerExamenesTomadosPorIngresos(List<Integer> ingresos);
+    List<ExamenTomadoResponse> obtenerExamenesTomadosPorIngresos(List<String> ingresos);
     PaginadoDTO<ExamenTomadoResponse> obtenerTodosLosExamenesTomadosPageable(int page, int size);
     
 }
