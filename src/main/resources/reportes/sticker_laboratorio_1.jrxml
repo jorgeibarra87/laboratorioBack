@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.5.final using JasperReports Library version 6.21.5-74d586df47b25dbd05bd0957999819196e59934a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="sticker_laboratorio_1" pageWidth="141" pageHeight="70" orientation="Landscape" columnWidth="139" leftMargin="1" rightMargin="1" topMargin="1" bottomMargin="1" uuid="99ce8d0f-c426-4a44-a551-807d007cb705">
+    <parameter name="PACIENTE_NOMBRE" class="java.lang.String"/>
+    <parameter name="EDAD_SEXO" class="java.lang.String"/>
+    <parameter name="ABREVIATURA_EXAMEN" class="java.lang.String"/>
+    <parameter name="CAMA" class="java.lang.String"/>
+    <parameter name="PRIORIDAD" class="java.lang.String"/>
+    <parameter name="SERVICIO" class="java.lang.String"/>
+    <parameter name="TIPO_MUESTRA" class="java.lang.String"/>
+    <parameter name="FECHA_HC" class="java.lang.String"/>
+    <detail>
+        <band height="68" splitType="Stretch">
+            <textField isBlankWhenNull="true">
+                <reportElement x="1" y="6" width="95" height="9" uuid="579b1df0-b2ef-45ce-870f-ac88dfb666c6"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="6" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PACIENTE_NOMBRE}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="98" y="5" width="40" height="9" uuid="c8153e80-c462-4c07-a8c7-f2f05bd13f9f"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Right" verticalAlignment="Middle">
+                    <font fontName="Arial" size="6" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{EDAD_SEXO}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="1" y="17" width="137" height="8" uuid="52435432-2a97-4234-8638-fb5b4eea4f76"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="6" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{ABREVIATURA_EXAMEN}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="1" y="28" width="90" height="8" uuid="16db1dec-6299-454f-8c9a-1be67354ee9c"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="6" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{CAMA}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="110" y="26" width="28" height="16" uuid="1b1051e7-3f98-4535-8afe-2e642e7b0065"/>
+                <box>
+                    <pen lineWidth="0.5" lineColor="#000000"/>
+                </box>
+                <textElement textAlignment="Center" verticalAlignment="Middle">
+                    <font fontName="Arial" size="8" isBold="true"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{PRIORIDAD}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="1" y="43" width="137" height="8" uuid="d57c573b-d587-42e3-8d4d-3c06cdcde81c"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="5" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{SERVICIO}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="1" y="51" width="137" height="8" uuid="6595e501-6e48-4b9b-8d16-da32c1de166b"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="6" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{TIPO_MUESTRA}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="1" y="60" width="137" height="8" uuid="926d2226-2d7c-45a8-b251-f1d419307d44"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="6" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{FECHA_HC}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
+</jasperReport>

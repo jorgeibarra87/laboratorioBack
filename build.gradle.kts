@@ -22,6 +22,9 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven {
+		url = uri("https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/")
+	}
 }
 
 extra["springAiVersion"] = "1.0.3"
@@ -43,6 +46,9 @@ dependencies {
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	testImplementation("org.springframework.security:spring-security-test")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+
+	implementation("net.sf.jasperreports:jasperreports:6.20.5")
+	implementation("org.apache.commons:commons-digester3:3.2")
 
 	// SQL Server JDBC
 	runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
