@@ -13,5 +13,7 @@ public interface ExamenesTomadosService {
     List<ExamenTomadoResponse> agregarExamenesTomados(@Valid List<ExamenTomadoRequestDTO> request);
     List<ExamenTomadoResponse> obtenerExamenesTomadosPorIngresos(List<String> ingresos);
     PaginadoDTO<ExamenTomadoResponse> obtenerTodosLosExamenesTomadosPageable(int page, int size);
+    List<ExamenTomadoResponse> guardarExamenesImpresion(@Valid List<ExamenTomadoRequestDTO> request);
+    List<ExamenTomadoResponse> actualizarExamenesTomados(@Valid List<ExamenTomadoRequestDTO> request);
     
 }

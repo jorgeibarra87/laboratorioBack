@@ -72,4 +72,15 @@ public class ExamenesTomadosController {
         log.info("✅ Retornando {} exámenes totales", response.getTotalElements());
         return ResponseEntity.ok(response);
     }
+
+    @Operation(summary = "Guardar exámenes al imprimir sticker",
+            description = "Guarda los exámenes en estado 'en proceso' al momento de imprimir el sticker")
+    @PostMapping("/guardar-impresion")
+    public ResponseEntity<List<ExamenTomadoResponse>> guardarImpresion(
+            @Valid @RequestBody List<ExamenTomadoRequestDTO> request) {
+        log.info("📄 Guardando {} exámenes por impresión de sticker", request.size());
+        List<ExamenTomadoResponse> response = examenesTomadosService.guardarExamenesImpresion(request);
+        log.info("✅ Se guardaron exitosamente {} exámenes con fecha de impresión", response.size());
+        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+    }
 }

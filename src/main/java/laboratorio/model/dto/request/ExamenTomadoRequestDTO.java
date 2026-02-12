@@ -21,6 +21,8 @@ public class ExamenTomadoRequestDTO {
     @JsonProperty("historia")
     @JsonAlias({"documento", "historia"})
     private String historia;
+    @JsonProperty("documento")
+    private String documento;
     @NotBlank(message = "El nombre del paciente es obligatorio")
     private String nomPaciente;
     private String sexo;
@@ -47,7 +49,7 @@ public class ExamenTomadoRequestDTO {
     @JsonProperty("codCama")
     private String codCama;
     @JsonProperty("cama")
-    private String cama;;
+    private String cama;
     private String diaCodigo;
     private String diaNombre;
     private List<String> tiposAislamiento;

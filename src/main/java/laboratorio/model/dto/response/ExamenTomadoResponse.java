@@ -38,4 +38,6 @@ public class ExamenTomadoResponse {
     private String areaSolicitante;
     private String prioridad;
     private String tomadoPor;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss.SSS")
+    private LocalDateTime fechaImpresionSticker;
 }

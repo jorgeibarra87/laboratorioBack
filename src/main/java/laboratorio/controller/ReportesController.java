@@ -77,6 +77,8 @@ public class ReportesController {
                         servicio = getStringValue(examen, "servicio", "LABORATORIO");
                     }
                     servicio = servicio.toUpperCase();
+                    String documento = getStringValue(examen, "documento", "");
+                    documento = documento;
 
                     // ✅ DEBUG: Ver valores construidos
                     log.info("   📋 Valores a usar:");
@@ -86,10 +88,11 @@ public class ReportesController {
                     log.info("      codCama: '{}'", codCama);
                     log.info("      prioridad: '{}'", prioridad);
                     log.info("      servicio: '{}'", servicio);
+                    log.info("      documento: '{}'", documento);
 
                     parameters.put("PACIENTE_NOMBRE", nomPaciente);
                     parameters.put("EDAD_SEXO", edadSexo);
-                    parameters.put("ABREVIATURA_EXAMEN", "QUIO: " + descProcedimiento.toUpperCase());
+                    parameters.put("ABREVIATURA_EXAMEN", descProcedimiento.toUpperCase());
                     parameters.put("CAMA", codCama);
                     parameters.put("PRIORIDAD", prioridad);
                     parameters.put("SERVICIO", servicio);
@@ -97,6 +100,7 @@ public class ReportesController {
                     parameters.put("FECHA_HC",
                             "FECHA: " + LocalDateTime.now()
                                     .format(DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm")));
+                    parameters.put("DOC", documento);
 
                     JasperPrint jasperPrint = JasperFillManager.fillReport(
                             jasperReport,
@@ -155,10 +159,10 @@ public class ReportesController {
     }
 
     private String obtenerLetrasPrioridad(String prioridad) {
-        //if (prioridad == null) return "R";
+        if (prioridad == null) return "R";
 
         String prio = prioridad.toLowerCase();
-        log.info("      prioridad prio: '{}'", prioridad);
+        //log.info("      prioridad prio: '{}'", prioridad);
         if (prio.contains("muy urgente") || prio.contains("muy_urgentes")) {
             return "MU";
         } else if (prio.contains("urgente") && !prio.contains("muy")) {

@@ -9,10 +9,11 @@
     <parameter name="SERVICIO" class="java.lang.String"/>
     <parameter name="TIPO_MUESTRA" class="java.lang.String"/>
     <parameter name="FECHA_HC" class="java.lang.String"/>
+    <parameter name="DOC" class="java.lang.String"/>
     <detail>
         <band height="68" splitType="Stretch">
             <textField isBlankWhenNull="true">
-                <reportElement x="1" y="6" width="95" height="9" uuid="579b1df0-b2ef-45ce-870f-ac88dfb666c6"/>
+                <reportElement x="1" y="6" width="119" height="9" uuid="579b1df0-b2ef-45ce-870f-ac88dfb666c6"/>
                 <box>
                     <pen lineWidth="0.0"/>
                 </box>
@@ -22,7 +23,7 @@
                 <textFieldExpression><![CDATA[$P{PACIENTE_NOMBRE}]]></textFieldExpression>
             </textField>
             <textField isBlankWhenNull="true">
-                <reportElement x="98" y="5" width="40" height="9" uuid="c8153e80-c462-4c07-a8c7-f2f05bd13f9f"/>
+                <reportElement x="120" y="6" width="18" height="9" uuid="c8153e80-c462-4c07-a8c7-f2f05bd13f9f"/>
                 <box>
                     <pen lineWidth="0.0"/>
                 </box>
@@ -82,7 +83,7 @@
                 <textFieldExpression><![CDATA[$P{TIPO_MUESTRA}]]></textFieldExpression>
             </textField>
             <textField isBlankWhenNull="true">
-                <reportElement x="1" y="60" width="137" height="8" uuid="926d2226-2d7c-45a8-b251-f1d419307d44"/>
+                <reportElement x="1" y="60" width="90" height="8" uuid="926d2226-2d7c-45a8-b251-f1d419307d44"/>
                 <box>
                     <pen lineWidth="0.0"/>
                 </box>
@@ -90,6 +91,16 @@
                     <font fontName="Arial" size="6" isBold="false"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{FECHA_HC}]]></textFieldExpression>
+            </textField>
+            <textField isBlankWhenNull="true">
+                <reportElement x="91" y="60" width="47" height="8" uuid="2f8af834-a16b-452b-8e0c-7261d57228b5"/>
+                <box>
+                    <pen lineWidth="0.0"/>
+                </box>
+                <textElement textAlignment="Left" verticalAlignment="Middle">
+                    <font fontName="Arial" size="6" isBold="false"/>
+                </textElement>
+                <textFieldExpression><![CDATA[$P{DOC}]]></textFieldExpression>
             </textField>
         </band>
     </detail>

@@ -51,6 +51,8 @@ public class ExamenesTomados {
     private String diaNombre;
     @Column(name = "TIPOS_AISLAMIENTO", length = 255)
     private List<String> tiposAislamiento;
+    @Column(name = "FECHA_IMPRESION_STICKER")
+    private LocalDateTime fechaImpresionSticker;
     @Column(name = "FECHA_SOLICITUD_FOLIO")
     private LocalDateTime fechaSolicitudFolio;
     @Column(name = "AREA_SOLICITANTE", length = 150)
