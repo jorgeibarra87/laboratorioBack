@@ -83,4 +83,13 @@ public class ExamenesTomadosController {
         log.info("✅ Se guardaron exitosamente {} exámenes con fecha de impresión", response.size());
         return ResponseEntity.status(HttpStatus.CREATED).body(response);
     }
+
+    @Operation(summary = "Actualizar exámenes pendientes como tomados")
+    @PostMapping("/actualizar")
+    public ResponseEntity<List<ExamenTomadoResponse>> actualizarPendientes(
+            @Valid @RequestBody List<ExamenTomadoRequestDTO> request) {
+        log.info("🔄 Actualizando {} exámenes pendientes", request.size());
+        List<ExamenTomadoResponse> response = examenesTomadosService.actualizarExamenesTomados(request);
+        return ResponseEntity.ok(response);
+    }
 }
