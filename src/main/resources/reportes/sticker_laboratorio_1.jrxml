@@ -48,7 +48,7 @@
                     <pen lineWidth="0.0"/>
                 </box>
                 <textElement textAlignment="Left" verticalAlignment="Middle">
-                    <font fontName="Arial" size="6" isBold="false"/>
+                    <font fontName="Arial" size="5" isBold="false"/>
                 </textElement>
                 <textFieldExpression><![CDATA[$P{CAMA}]]></textFieldExpression>
             </textField>
